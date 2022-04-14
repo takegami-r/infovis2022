@@ -1,6 +1,6 @@
 class Vec3{
     
-    Vec3( x, y, z ){
+    void Vec3( x, y, z ){
         this.x = x;
         this.y = y;
         this.z = z;
@@ -21,7 +21,7 @@ class Vec3{
         return this;
     }
     
-    sum(){
+    int sum(){
         return this.x + this.y + this.z;
     }
     
