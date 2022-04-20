@@ -16,7 +16,7 @@
 	        .append("rect")
 	        .attr("x", padding)
 	        .attr("y", function(d,i){ return padding + i * ( height + padding ); })
-	        .attr("width", function(d){ return d; })
+	        .attr("width", function(d){ return d.data; })
           .attr("height", height);
 	 };
 	</script>
