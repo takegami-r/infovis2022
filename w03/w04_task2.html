@@ -18,7 +18,7 @@
 	        .attr("y", function(d,i){ return padding + i * ( height + padding ); })
 	        .attr("width", function(d){ return d.data; })
                 .attr("height", height);
-		//.attr("fill", function(d){ return rgb(0, 0, (d.data * 10) ); })
+		.style("fill", function(d){ return rgb(0, 0, d.data ); })
 	     svg.selectAll("text")
 		.data(data)
 	        .enter()
