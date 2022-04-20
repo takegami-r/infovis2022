@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>W04: Example 08</title>
+    </head>
+    <body>
+	<svg>
+	    <g id="group1">
+		<circle cx="20"  cy="20" r="10"></circle>
+		<circle cx="100" cy="50" r="10"></circle>
+		<circle cx="70"  cy="80" r="10"></circle>
+	    </g>
+	    <g id="group2">
+		<circle cx="170" cy="30" r="10"></circle>
+		<circle cx="150" cy="70" r="10"></circle>
+	    </g>
+	</svg>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script>
+	 var g = d3.select("#group1");
+	 g.selectAll("circle").style("fill","red");
+	</script>
+    </body>
+</html>
