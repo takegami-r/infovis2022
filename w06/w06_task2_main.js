@@ -6,7 +6,7 @@ d3.csv("https://vizlab-kobe-lecture.github.io/InfoVis2021/W04/data.csv")
             parent: '#drawing_region',
             width: 256,
             height: 256,
-            margin: {top:10, right:10, bottom:100, left:100}
+            margin: {top:10, right:10, bottom:200, left:200}
         };
 
         const scatter_plot = new ScatterPlot( config, data );
