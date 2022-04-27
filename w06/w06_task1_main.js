@@ -86,8 +86,8 @@ class ScatterPlot {
             .attr("cy", d => self.yscale( d.y ) )
             .attr("r", d => d.r );
 
-        self.xaxis_group
-            .call( self.xaxis );
+        //self.xaxis_group
+        //    .call( self.xaxis );
         
         self.yaxis_group
             .call( self.yaxis );
