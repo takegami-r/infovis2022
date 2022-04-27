@@ -58,7 +58,7 @@ class ScatterPlot {
             .ticks(6);
 
         self.yaxis_group = self.svg.append('g')
-            .attr('transform', `translate(${self.config.margin.left},0)`);
+            .attr('transform', `translate(${self.config.margin.left},${self.inner_width})`);
     }
 
     update() {
