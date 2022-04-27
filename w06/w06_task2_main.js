@@ -6,7 +6,7 @@ d3.csv("https://vizlab-kobe-lecture.github.io/InfoVis2021/W04/data.csv")
             parent: '#drawing_region',
             width: 256,
             height: 256,
-            margin: {top:10, right:10, bottom:200, left:200}
+            margin: {top:10, right:10, bottom:50, left:50}
         };
 
         const scatter_plot = new ScatterPlot( config, data );
@@ -23,7 +23,7 @@ class ScatterPlot {
             parent: config.parent,
             width: config.width || 256,
             height: config.height || 256,
-            margin: config.margin || {top:10, right:30, bottom:100, left:100}
+            margin: config.margin || {top:10, right:10, bottom:30, left:30}
         }
         this.data = data;
         this.init();
@@ -58,7 +58,7 @@ class ScatterPlot {
             .ticks(6);
 
         self.yaxis_group = self.svg.append('g')
-            .attr('transform', `translate(70,${self.config.margin.top})`);
+            .attr('transform', `translate(30,${self.config.margin.top})`);
     }
 
     update() {
