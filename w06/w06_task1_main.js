@@ -54,7 +54,7 @@ class ScatterPlot {
         self.xaxis_group = self.chart.append('g')
             .attr('transform', `translate(0, ${self.inner_height})`);
         
-        self.yaxis = d3.axisBottom( self.yscale )
+        self.yaxis = d3.axisLeft( self.yscale )
             .ticks(6);
 
         self.yaxis_group = self.chart.append('g')
@@ -86,8 +86,8 @@ class ScatterPlot {
             .attr("cy", d => self.yscale( d.y ) )
             .attr("r", d => d.r );
 
-        //self.xaxis_group
-        //    .call( self.xaxis );
+        self.xaxis_group
+            .call( self.xaxis );
         
         self.yaxis_group
             .call( self.yaxis );
