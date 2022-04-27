@@ -88,25 +88,10 @@ class ScatterPlot {
 
         self.xaxis_group
             .call( self.xaxis )
-            .append("text")
-            .attr("fill", "black")
-            .attr("x", 0)//(width - margin.left - margin.right) / 2 + margin.left)
-            .attr("y", 0)
-            .attr("text-anchor", "middle")
-            .attr("font-size", "10pt")
-            .attr("font-weight", "bold")
-            .text("X Label");
+         　　;
         
         self.yaxis_group
             .call( self.yaxis )
-            .append("text")
-            .attr("fill", "black")
-            .attr("x", -(height - margin.top - margin.bottom) / 2 - margin.top)
-            .attr("y", -35)
-            .attr("transform", "rotate(-90)")
-            .attr("text-anchor", "middle")
-            .attr("font-weight", "bold")
-            .attr("font-size", "10pt")
-            .text("Y Label");
+            ;
     }
 }
