@@ -40,13 +40,13 @@ class ScatterPlot {
             .attr('transform', `translate(${self.config.margin.left}, ${self.config.margin.top})`);
 
         self.inner_width = self.config.width - self.config.margin.right;
-        self.inner_height = self.config.height - self.config.margin.top - self.config.margin.bottom;
+        self.inner_height = self.config.height - self.config.margin.bottom;
 
         self.xscale = d3.scaleLinear()
             .range( [self.config.margin.left, self.inner_width] );
 
         self.yscale = d3.scaleLinear()
-            .range( [0, self.inner_height] );
+            .range( [self.config.margin.top, self.inner_height] );
 
         self.xaxis = d3.axisBottom( self.xscale )
             .ticks(6);
