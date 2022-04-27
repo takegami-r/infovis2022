@@ -35,8 +35,8 @@ class ScatterPlot {
         self.svg = d3.select( self.config.parent )
             .attr('width', self.config.width)
             .attr('height', self.config.height);
-            .attr('x',100)
-            .attr('y',100)
+            //.attr('x',100)
+            //.attr('y',100)
 
         self.chart = self.svg.append('g')
             .attr('transform', `translate(${self.config.margin.left}, ${self.config.margin.top})`);
