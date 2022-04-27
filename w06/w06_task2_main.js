@@ -36,8 +36,8 @@ class ScatterPlot {
             .attr('width', self.config.width)
             .attr('height', self.config.height);
 
-        self.chart = self.svg.append('g')
-            .attr('transform', `translate(${self.config.margin.left}, ${self.config.margin.top})`);
+        self.chart = self.svg.append('g');
+            //.attr('transform', `translate(${self.config.margin.left}, ${self.config.margin.top})`);
 
         self.inner_width = self.config.width - self.config.margin.right;
         self.inner_height = self.config.height - self.config.margin.bottom;
@@ -52,13 +52,13 @@ class ScatterPlot {
             .ticks(6);
 
         self.xaxis_group = self.svg.append('g')
-            .attr('transform', `translate(${self.config.margin.left}, ${self.inner_height + 30})`);
+            .attr('transform', `translate(${self.config.margin.left}, ${self.inner_height})`);
         
         self.yaxis = d3.axisLeft( self.yscale )
             .ticks(6);
 
         self.yaxis_group = self.svg.append('g')
-            .attr('transform', `translate(30,${self.config.margin.top})`);
+            .attr('transform', `translate(${self.config.margin.left},0)`);
     }
 
     update() {
@@ -98,6 +98,15 @@ class ScatterPlot {
             .text("X Label");
         
         self.yaxis_group
-            .call( self.yaxis );
+            .call( self.yaxis )
+            .append("text")
+            .attr("fill", "black")
+            .attr("x", -(height - margin.top - margin.bottom) / 2 - margin.top)
+            .attr("y", -35)
+            .attr("transform", "rotate(-90)")
+            .attr("text-anchor", "middle")
+            .attr("font-weight", "bold")
+            .attr("font-size", "10pt")
+            .text("Y Label");
     }
 }
