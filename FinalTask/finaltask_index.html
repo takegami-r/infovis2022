@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>InfoVis Final Task</title>
+    <style>
+    body {
+        font-family: system-ui;
+    }
+    #tooltip {
+        position: absolute;
+        opacity: 0;
+        background: #fff;
+        border: 1px solid #ddd;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 2px 8px;
+    }
+    .tooltip-label {
+        font-weight: 500;
+        font-size: 11px;
+        color: #888;
+    }
+    .circle:hover {
+    fill: red;
+    }
+    </style>
+    </head>
+    <body>
+    <div>
+        <button type="button" id="precipitation">降水量</button>
+        <button type="button" id="daylight">日照時間</button>
+        <button type="button" id="temperature">気温</button>
+    </div>
+    <div id="tooltip"></div>
+	<svg id="drawing_region_linechart"></svg>
+    <svg id="drawing_region_scatterplot"></svg>
+    <svg id="drawing_region_parallelcoordinates"></svg>
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+	<script src="finaltask_linechart.js"></script>
+    <script src="finaltask_scatterplot.js"></script>
+    <script src="finaltask_parallelcoordinates.js"></script>
+    <script src="finaltask_main.js"></script>
+    </body>
+</html>
